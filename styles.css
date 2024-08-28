@@ -118,14 +118,24 @@ input {
     border-radius: 4px;
 }
 
-input:invalid {
-    border: 1px solid rgb(255, 83, 83);
+input:required {
+    border: 1px solid #E5E7EB;
 }
 
 input:focus {
     outline: none;
     border: 1px solid rgb(64, 64, 255);
     box-shadow: 2px 2px 2px rgb(226, 226, 226);
+}
+
+input:invalid:focus {
+    border: 1px solid #ff1e1e;
+}
+
+.message {
+    font-size: 12px;
+    color: rgb(255, 47, 47);
+    visibility: hidden;
 }
 
 .submit-button {

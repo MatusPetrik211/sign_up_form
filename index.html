@@ -30,37 +30,38 @@
             <br>
             You <em>know</em> you want to.
         </p>
-        <form action="" method="get">
+        <form action="" method="get" onsubmit="return validateMyForm();">
             <div class="form-body">
                 <p class="intro-text">Let's do this!</p>
                     <div class="input-field">
                         <div class="form-parts">
                             <fieldset>
                                 <label for="first-name">FIRST NAME</label>
-                                <input type="text" id="first-name" name="firstName">
+                                <input type="text" id="first-name" name="firstName" placeholder="John" required>
                             </fieldset>
                             <fieldset>
-                                <label for="email">EMAIL</label>
-                                <input type="email" id="email" name="email">
+                                <label for="email">EMAIL*</label>
+                                <input type="email" id="email" name="email" required placeholder="johndoe@example.com">
                             </fieldset>
                             <fieldset>
-                                <label for="password">PASSWORD</label>
-                                <input type="password" id="password" name="password">
+                                <label for="password">PASSWORD*</label>
+                                <input type="password" id="password" name="password" required>
+                                <p class="message">*Passwords do not match</p>
                             </fieldset>
                         </div>
                         
                         <div class="form-parts">
                             <fieldset>
                                 <label for="last-name">LAST NAME</label>
-                                <input type="text" id="last-name" name="lastName">
+                                <input type="text" id="last-name" name="lastName" placeholder="Doe" required>
                             </fieldset>
                             <fieldset>
-                                <label for="phone-number">PHONE NUMBER</label>
-                                <input type="tel" id="phone-number" name="phoneNumber">
+                                <label for="phone-number">PHONE NUMBER*</label>
+                                <input type="tel" id="phone-number" name="phoneNumber" placeholder="1234567890" pattern="[1-9]{1}[0-9]{9}" required>
                             </fieldset>                        
                             <fieldset>
-                                <label for="confirm-password">CONFIRM PASSWORD</label>
-                                <input type="password" id="confirm-password" name="confirmPassword">
+                                <label for="confirm-password">CONFIRM PASSWORD*</label>
+                                <input type="password" id="confirm-password" name="confirmPassword" required>
                             </fieldset>
                         </div>
                     </div>
