@@ -4,11 +4,7 @@ const message = document.querySelector('.message');
 const form = document.querySelector('form');
 
 form.addEventListener('submit', e => {
-    const password = document.querySelector('#password').value;
-    const confirmPassword = document.querySelector('#confirm-password').value;
-    const message = document.querySelector('.message'); 
-
-    if(password !== confirmPassword) {
+    if(password.value !== confirmPassword.value) {
         message.setAttribute('style', 'visibility: visible');
         e.preventDefault();
     }
